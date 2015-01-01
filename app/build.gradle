@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 15
     buildToolsVersion "19.1.0"
 
     defaultConfig {
         applicationId "asd.dogw.videodownloader"
-        minSdkVersion 14
-        targetSdkVersion 19
+        minSdkVersion 10
+        targetSdkVersion 15
         versionCode 1
-        versionName "1.0"
+        versionName "0.1 Test"
     }
     buildTypes {
         release {

@@ -211,7 +211,7 @@ public class MainActivity extends Activity
 
 		if (Intent.ACTION_SEND.equals(action) && (type != null))
 		{
-			if ("text/plain".equals(type))
+			//if ("text/plain".equals(type))
 			{
 				handleSendText(intent);
 			}
@@ -253,7 +253,6 @@ public class MainActivity extends Activity
 	private void handleSendText(Intent intent)
 	{
 		String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
-
 		if (sharedText != null)
 		{
 			EV1.setText(sharedText);
@@ -271,6 +270,7 @@ public class MainActivity extends Activity
 		request.setShowRunningNotification(true);
 		//不显示下载界面
 		request.setVisibleInDownloadsUi(true);
+		request.allowScanningByMediaScanner();
 
 		try
 		{
@@ -381,9 +381,9 @@ public class MainActivity extends Activity
 					for (int i = 0; i < (infoOfVideo.size() - 1); i++)
 					{
 						String key = "" + i;
-//						download((String) infoOfVideo.get(key),
-//								 videoName + dateStr,
-//								 "「" + key + "」" + videoName + ".flv");
+						download((String) infoOfVideo.get(key),
+								 videoName + dateStr,
+								 "「" + key + "」" + videoName + ".flv");
 
 						HashMap<String, Object> map = new HashMap<String, Object>();
 						map.put("videoName", key + ":" + videoName);
