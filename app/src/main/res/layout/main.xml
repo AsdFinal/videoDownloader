@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:background="#FFFFFF">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:background="#03A9F4">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="  V    "
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:textSize="35sp"
+			android:textStyle="bold|italic"
+			android:alpha="0.87"
+			android:textColor="#FFFFFF"/>
+
+		<EditText
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:id="@+id/EditText1"
+			android:lines="1"
+			android:maxLines="1"
+			android:textColor="#FFFFFF"
+			android:typeface="monospace"
+			android:inputType="textWebEditText"
+			android:alpha="0.9"
+			android:hint="输入视频播放网址"
+			android:layout_weight="1"
+			android:textColorHint="#FFFFFF"
+			android:shadowRadius="5"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			style="?android:attr/buttonBarButtonStyle"
+			android:text="↺"
+			android:layout_width="wrap_content"
+			android:onClick="onWork"
+			android:layout_gravity="center"
+			android:textSize="30sp"
+			android:alpha="0.54"
+			android:textColor="#FFFFFF"
+			android:id="@+id/mainButton1"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center_vertical|center_horizontal"
+		android:layout_gravity="center_vertical|center_horizontal"
+		android:id="@+id/processingBar">
+
+		<ProgressBar
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Processing"
+			android:layout_width="wrap_content"
+			android:alpha="0.54"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:clickable="false">
+
+		<ListView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/ListView1"
+			android:background="#FFFFFF"
+			android:alpha="0.6"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
