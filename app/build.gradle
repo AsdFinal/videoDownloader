@@ -8,8 +8,8 @@ android {
         applicationId "asd.dogw.videodownloader"
         minSdkVersion 10
         targetSdkVersion 15
-        versionCode 1
-        versionName "0.1 Test"
+        versionCode 2
+        versionName "0.2"
     }
     buildTypes {
         release {

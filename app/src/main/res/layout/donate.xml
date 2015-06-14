@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="如果你觉得这个程序对你有帮助，请捐赠我。"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="支付宝帐号:"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:inputType="textEmailAddress"
+		android:ems="10"
+		android:layout_width="wrap_content"
+		android:text="ms519093175@gmail.com"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="本程序作者，也就是我，在这个版本发布的时候，刚刚高中毕业，为了继续开发这个程序，花了两百块买了一个手机作为测试机(我自己用的是WP)，而维护解析服务器也需要一笔钱作为租金，如果你觉得这个程序对你有所帮助，请捐赠作者。"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"/>
+
+</LinearLayout>
+

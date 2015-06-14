@@ -5,7 +5,11 @@
 		/>
 	<item
         android:id="@+id/item2"
-        android:title="清除所有已下载文件"
+        android:title="捐助！"
+		/>
+	<item
+		android:id="@+id/item4"
+		android:title="更新记录"
 		/>
 	<item
         android:id="@+id/item3"
