@@ -2,7 +2,6 @@ package asd.dogw.videodownloader;
 
 import android.app.*;
 import android.content.*;
-import android.database.*;
 import android.net.*;
 import android.os.*;
 import android.view.*;
@@ -292,16 +291,17 @@ public class MainActivity extends Activity
 						return -1;
 					}
 				long id = downloadManager.enqueue ( request );
-				DownloadManager.Query query=new DownloadManager.Query ( );
-				query.setFilterById ( id );
-				Cursor myDownload=downloadManager.query ( query );
-				myDownload.moveToFirst ( );
-				int mediaTypeIndex=myDownload.getColumnIndex ( downloadManager.COLUMN_MEDIA_TYPE );
-				String mediaType=myDownload.getString ( mediaTypeIndex );
-				myDownload.close ( );
-				echo2file ( "/sdcard/log.txt", mediaType );
-				//Toast.makeText(getApplicationContext(),mediaType,1);
-				mydb.insertRec ( id, dir );
+
+				/*DownloadManager.Query query=new DownloadManager.Query ( );
+				 query.setFilterById ( id );
+				 Cursor myDownload=downloadManager.query ( query );
+				 myDownload.moveToFirst ( );
+				 int mediaTypeIndex=myDownload.getColumnIndex ( downloadManager.COLUMN_MEDIA_TYPE );
+				 String mediaType=myDownload.getString ( mediaTypeIndex );
+				 myDownload.close ( );
+				 echo2file ( "/sdcard/log.txt", mediaType );
+				 //Toast.makeText(getApplicationContext(),mediaType,1);
+				 mydb.insertRec ( id, dir );*/
 				return id;
 			}
 
@@ -472,6 +472,7 @@ public class MainActivity extends Activity
 										for ( int i = 0; i < ( infoOfVideo.size ( ) - 1 ); i++ )
 											{
 												String key = "" + i;
+												//Toast.makeText ( getApplicationContext ( ), "now " + i, 1 ).show ( );
 												download ( (String) infoOfVideo.get ( key ),
 														  videoName + dateStr,
 														  "「" + key + "」" + videoName + ".flv" );
